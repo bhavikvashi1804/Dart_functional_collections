@@ -35,9 +35,16 @@ void main(List<String> arguments) {
     .expand((onePeople)=>onePeople.orders
     .where((oneOrder)=>oneOrder.orderTotal>500)
     .map((oneOrder)=>{'name':onePeople.name,'total':oneOrder.orderTotal})
-      
-  ).skip(3);
+  );
   print(resultOrders);
+
+
+  //partitioning operator
+  var resultOrders1=peopleList
+    .expand((onePeople)=>onePeople.orders
+    .map((oneOrder)=>oneOrder.orderTotal).takeWhile((t)=>t>400)
+  );
+  print(resultOrders1);
 
   
 }
