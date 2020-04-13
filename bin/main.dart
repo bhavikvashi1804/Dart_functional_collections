@@ -32,10 +32,8 @@ void main(List<String> arguments) {
   //it does not allow to select age
   //you must provide list's list item 
   var resultOrders=peopleList
-    .where((onePeople)=>onePeople.age>20)
     .expand((onePeople)=>onePeople.orders
-    .map((oneOrder)=>{'id':oneOrder.orderId,'total':oneOrder.orderTotal})
-    
+    .where((oneOrder)=>oneOrder.orderDate.isAfter(DateTime(2017)))  
   );
   print(resultOrders);
 
