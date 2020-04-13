@@ -34,7 +34,7 @@ void main(List<String> arguments) {
   var resultOrders=peopleList.expand(
     (onePeople)=>onePeople.orders.where(
       (oneOrder)=>oneOrder.orderTotal>500
-    )
+    ).map((oneOrder)=>oneOrder.orderTotal)
   );
   print(resultOrders);
 
