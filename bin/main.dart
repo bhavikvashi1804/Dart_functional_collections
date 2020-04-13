@@ -1,50 +1,11 @@
-
-
-import 'package:function_collections/people.dart';
-
-
-
 void main(List<String> arguments) {
 
-  //where operator
-  //select according to condition
-  var result=peopleList.where((onePeople)=>(onePeople.age>20) && (onePeople.id>1));
-  print(result);
 
-  //projection operator
-  //select
-  var result1=peopleList.map((onePeople)=>onePeople.name.toUpperCase());
-  print(result1);
+  var num=[1,1,1,4,5,5];
+  var res=num.toSet();
+  print(res);
 
-  var peopleData=peopleList
-  .where((onePeople)=>onePeople.age>20)
-  .map((onePeople)=>{
-    'name': onePeople.name,
-    'age':onePeople.age,
-  });
-  //for each element
-  peopleData.forEach((onePeople)=>{
-    print('My Name is ${onePeople['name']} and my age is ${onePeople['age']}')
-  });
-
-
-  //select many compound
-  //it does not allow to select age
-  //you must provide list's list item 
-  var resultOrders=peopleList
-    .expand((onePeople)=>onePeople.orders
-    .where((oneOrder)=>oneOrder.orderTotal>500)
-    .map((oneOrder)=>{'name':onePeople.name,'total':oneOrder.orderTotal})
-  );
-  print(resultOrders);
-
-
-  //partitioning operator
-  var resultOrders1=peopleList
-    .expand((onePeople)=>onePeople.orders
-    .map((oneOrder)=>oneOrder.orderTotal).takeWhile((t)=>t>400)
-  );
-  print(resultOrders1);
+  
 
   
 }
