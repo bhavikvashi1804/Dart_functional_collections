@@ -1,4 +1,4 @@
 
 void main(List<String> arguments) {
-  print('Hello worldP');
+  print('Hello world');
 }
