@@ -31,10 +31,11 @@ void main(List<String> arguments) {
   //select many compound
   //it does not allow to select age
   //you must provide list's list item 
-  var resultOrders=peopleList.expand(
-    (onePeople)=>onePeople.orders.where(
-      (oneOrder)=>oneOrder.orderTotal>500
-    ).map((oneOrder)=>oneOrder.orderTotal)
+  var resultOrders=peopleList
+    .where((onePeople)=>onePeople.age>20)
+    .expand((onePeople)=>onePeople.orders
+    .where((oneOrder)=>oneOrder.orderTotal>500)
+    
   );
   print(resultOrders);
 
