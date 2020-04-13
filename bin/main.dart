@@ -33,7 +33,7 @@ void main(List<String> arguments) {
   //you must provide list's list item 
   var resultOrders=peopleList
     .expand((onePeople)=>onePeople.orders
-    .where((oneOrder)=>oneOrder.orderDate.isBefore(DateTime(2017)))  
+    .map((oneOrder)=>{'name':onePeople.name,'total':oneOrder.orderTotal})  
   );
   print(resultOrders);
 
