@@ -36,7 +36,7 @@ void main(List<String> arguments) {
     .where((oneOrder)=>oneOrder.orderTotal>500)
     .map((oneOrder)=>{'name':onePeople.name,'total':oneOrder.orderTotal})
       
-  ).take(3);
+  ).skip(3);
   print(resultOrders);
 
   
