@@ -6,7 +6,7 @@ void main(List<String> arguments) {
     .expand((onePeople)=>onePeople.orders
     .where((oneOrder)=>oneOrder.orderTotal>500)
     .map((oneOrder)=>{'name':onePeople.name,'total':oneOrder.orderTotal, 'date':oneOrder.orderDate})  
-  ).first;	  
+  ).firstWhere((oneElement)=>oneElement['total']==800);	  
   print(resultOrders);	
 
   
