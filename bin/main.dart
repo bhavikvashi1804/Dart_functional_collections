@@ -11,7 +11,7 @@ void main(List<String> arguments) {
   print(result);
 
   //projection operator
-  var result1=peopleList.map((onePeople)=>onePeople.name);
+  var result1=peopleList.map((onePeople)=>onePeople.name.toUpperCase());
   print(result1);
   
 }
