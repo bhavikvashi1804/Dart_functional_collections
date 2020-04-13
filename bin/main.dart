@@ -1,9 +1,12 @@
 
 
-import '../lib/people.dart';
+import 'package:function_collections/people.dart';
+
+
 
 void main(List<String> arguments) {
 
-  peopleList.forEach(print);
+  var result=peopleList.where((onePeople)=>(onePeople.age>20));
+  print(result);
   
 }

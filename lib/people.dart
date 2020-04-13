@@ -56,7 +56,7 @@ var peopleList=<People>[
     ],
   ),
   People(
-    id: 1,
+    id: 2,
     name: 'Prakshal Trivedi',
     city: 'Surat',
     age: 19,
@@ -79,7 +79,7 @@ var peopleList=<People>[
     ],
   ),
   People(
-    id: 1,
+    id: 3,
     name: 'Raj Patel',
     city: 'Bharuch',
     age: 30,
