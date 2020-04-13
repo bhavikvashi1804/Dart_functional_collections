@@ -33,7 +33,7 @@ void main(List<String> arguments) {
   //you must provide list's list item 
   var resultOrders=peopleList
     .expand((onePeople)=>onePeople.orders
-    .where((oneOrder)=>oneOrder.orderDate.isAfter(DateTime(2017)))  
+    .where((oneOrder)=>oneOrder.orderDate.isBefore(DateTime(2017)))  
   );
   print(resultOrders);
 
