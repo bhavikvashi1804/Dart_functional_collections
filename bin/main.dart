@@ -13,5 +13,16 @@ void main(List<String> arguments) {
   //projection operator
   var result1=peopleList.map((onePeople)=>onePeople.name.toUpperCase());
   print(result1);
+
+  var peopleData=peopleList.map((onePeople)=>{
+    'name': onePeople.name,
+    'age':onePeople.age,
+  });
+  print(peopleData);
+
+
+  peopleData.forEach((onePeople)=>{
+    print('My Name is ${onePeople['name']} and my age is ${onePeople['age']}')
+  });
   
 }
